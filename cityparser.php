@@ -27,9 +27,6 @@ try {
             $description = $parser->parse($allCities['city'],$row['description']);
 
             if ((strcmp($title, $row['title']) !== 0) || (strcmp($description, $row['description'] !==0))) {
-                //$row['title'] = $title;
-                //$row['description'] = $description;
-                //$database->updateRow($row);
 
                 echo 'updating row='.$row['id'].'<br/>';
 
@@ -38,6 +35,10 @@ try {
 
                 echo 'description before = '.$row['description'].'<br/><br/>';
                 echo 'description after= '.$description.'<br/><br/>';
+
+                $row['title'] = $title;
+                $row['description'] = $description;
+                $database->updateRow($row);
             }
         }
     }

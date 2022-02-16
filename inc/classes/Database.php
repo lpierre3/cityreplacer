@@ -41,8 +41,10 @@ class Database extends DatabaseHandler
     }
 
     public function updateRow($row) {
+        $stmt = null;
+
         try {
-            $stmt = $this->pdo->prepare("update $this->dbTable set title:=title, description=:description WHERE id=:id");
+            $stmt = $this->pdo->prepare("update $this->dbTable set title=:title, description=:description WHERE id=:id");
             $stmt->bindValue(':title', $row['title']);
             $stmt->bindValue(':description', $row['description']);
             $stmt->bindValue(':id', $row['id']);
