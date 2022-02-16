@@ -10,4 +10,5 @@ All the configuration files are located in the config folder.
 To run the application execute the command: php cityparser.php
 
 # Release
-- Version 1.0 - 16/02/2022
+- Version 1.0 - 16/02/2022 - Initial production release
+- Version 1.1 - 16/02/2022 - Updates the readme file
