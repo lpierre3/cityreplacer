@@ -9,3 +9,5 @@ All the configuration files are located in the config folder.
 #Instructions
 To run the application execute the command: php cityparser.php
 
+#Release
+- Version 1.0 - 16/02/2022
